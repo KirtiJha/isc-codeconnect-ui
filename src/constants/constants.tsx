@@ -1,0 +1,16 @@
+export const urls = {
+  authBasePath: "/auth",
+  login: "/",
+  chat: "/chat",
+  userSession: "/api/user",
+  chatQuery: "/api/query",
+  chatQueryStream: "/api/query/stream",
+  chatReset: "/api/chat/reset",
+  chatNew: "/api/chat/new",
+  apiChatReset: "/api/chat/reset",
+  apiChatNew: "/api/chat/new",
+  apiQuery: "/api/query",
+  apiChat: "/api/chat",
+  apiQueryStream: "/api/query/stream",
+  apiHistory: "/api/history",
+};

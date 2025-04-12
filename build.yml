@@ -1,0 +1,13 @@
+apiVersion: automation.cio/v1alpha1
+kind: RepositoryConfig
+ealImapNumber: EAL-009718
+build:
+  strategy: cirrus-deployment
+  pipeline: nodejs-v20-npm-container-image
+  version: v1
+  config:
+    cirrus-project-name: isc-code-connect
+    cirrus-pipeline-name: isc-code-connect-ui
+    service-port: "3000"
+    cirrus-region: dal-containers
+    deploy-verification-memory-request: q256mb

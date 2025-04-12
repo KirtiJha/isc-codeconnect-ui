@@ -1,0 +1,26 @@
+# Application specific configuration for DEV environement
+apiVersion: cirrus.ibm.com/v1alpha1
+kind: Application
+metadata:
+  name: isc-code-connect-ui-uat
+  labels:
+    applications.cirrus.ibm.com/pipeline: 7396da28-9e7b-4cf9-b0e3-81e3df2da375
+    applications.cirrus.ibm.com/eal: EAL-009718
+spec:
+  livenessProbe:
+    httpGet:
+      path: /api/health
+    periodSeconds: 300
+    timeoutSeconds: 300
+  readinessProbe:
+    httpGet:
+      path: /api/health
+    periodSeconds: 300
+    timeoutSeconds: 300
+  env:
+    - name: APP_ENV
+      value: "test"
+    - name: production
+      value: "false"
+  replicas: 2
+  quota: q8gb

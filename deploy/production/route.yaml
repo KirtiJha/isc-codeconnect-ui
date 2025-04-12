@@ -1,0 +1,5 @@
+# Application specific route for DEV environement
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: isc-code-connect-ui-prod
